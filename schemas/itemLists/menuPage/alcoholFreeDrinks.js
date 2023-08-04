@@ -1,7 +1,10 @@
+import { BottleIcon } from '@sanity/icons'
+
 export default {
     name: 'alcoholFreeDrinks',
     type: 'document',
     title: 'Alcohol Free Drinks',
+    icon: BottleIcon,
     fields: [
         {
             name: 'title',

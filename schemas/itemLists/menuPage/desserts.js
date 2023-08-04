@@ -1,7 +1,10 @@
+import { IceCreamIcon } from '@sanity/icons'
+
 export default {
     name: 'desserts',
     type: 'document',
     title: 'Desserts',
+    icon: IceCreamIcon,
     fields: [
         {
             name: 'title',
