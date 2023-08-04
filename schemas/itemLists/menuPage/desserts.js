@@ -1,4 +1,5 @@
 import { IceCreamIcon } from '@sanity/icons'
+import { defineField } from 'sanity'
 
 export default {
     name: 'desserts',
@@ -6,6 +7,13 @@ export default {
     title: 'Desserts',
     icon: IceCreamIcon,
     fields: [
+        defineField({
+            // should match 'languageField' plugin configuration setting, if customized
+            name: 'language',
+            type: 'string',
+            readOnly: true,
+
+        }),
         {
             name: 'title',
             type: 'string',

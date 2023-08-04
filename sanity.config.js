@@ -8,11 +8,12 @@ import {
   projectInfoWidget,
 } from "@sanity/dashboard";
 import { documentInternationalization } from '@sanity/document-internationalization'
+const PROJECT_ID = process.env.SANITY_STUDIO_PROJECT_ID
 export default defineConfig({
   name: 'default',
   title: 'Sanity',
 
-  projectId: 'w2fhosuu',
+  projectId: PROJECT_ID,
   dataset: 'production',
 
   plugins: [deskTool(), visionTool(), documentInternationalization({
@@ -21,14 +22,21 @@ export default defineConfig({
       { id: 'de', title: 'German' },
       { id: 'en', title: 'English' }
     ],
-    schemaTypes: ['alcoholDrinks'],
+    schemaTypes: [
+      'alcoholFreeDrinks',
+      'alcoholDrinks',
+      'mainDishes',
+      'pizzas',
+      'salads',
+      'desserts'
+    ],
     languageField: `language`
   }),
   // configure the dashboard tool with widgets
   dashboardTool({
     widgets: [
       projectUsersWidget({ layout: 'medium' }),
-      projectUsersWidget(),
+      projectUsersWidget({ layout: 'medium' }),
     ]
   })],
 

@@ -1,4 +1,5 @@
 import { BottleIcon } from '@sanity/icons'
+import { defineField } from 'sanity'
 
 export default {
     name: 'alcoholFreeDrinks',
@@ -6,6 +7,13 @@ export default {
     title: 'Alcohol Free Drinks',
     icon: BottleIcon,
     fields: [
+        defineField({
+            // should match 'languageField' plugin configuration setting, if customized
+            name: 'language',
+            type: 'string',
+            readOnly: true,
+
+        }),
         {
             name: 'title',
             type: 'string',
