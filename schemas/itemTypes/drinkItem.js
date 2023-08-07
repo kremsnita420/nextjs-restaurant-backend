@@ -1,10 +1,10 @@
-import { WarningFilledIcon } from '@sanity/icons'
+import { SchemaIcon } from '@sanity/icons'
 
 export default {
     name: 'drinkItem',
     type: 'document',
     title: 'Drink item',
-    icon: WarningFilledIcon,
+    icon: SchemaIcon,
     fields: [
         {
             name: 'title',
